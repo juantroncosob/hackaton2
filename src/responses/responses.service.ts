@@ -10,7 +10,7 @@ export class ResponsesService {
 
   //metodo para crear response
   async create(createResponseDto: CreateResponseDto) {
-    await this.prisma.response.create({
+    return await this.prisma.response.create({
       data: {
         firstName: createResponseDto.firstName,
         lastName: createResponseDto.lastName,
